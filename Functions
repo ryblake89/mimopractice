@@ -99,7 +99,33 @@ calculate("-", 30, 10)
 ______________________________________________________________________________________________________
 Functions with Lists
 ______________________________________________________________________________________________________
+def is_multiplayer(players):
+    print(len(players) == 2)
 
+players = ["Amy", "Jay"]
+is_multiplayer(players)
+
+def display_programme(movies):
+    print("Airing tonight:")
+    print(movies)
+
+movie_list = ["Alien", "Moon"]
+display_programme(movie_list)
+
+def get_winner(top_players):
+    winner = top_players[0]
+    print(f"Game winner: {winner}")
+    
+top_players = ["Jay", "Meg", "Cy"]
+get_winner(top_players)
+
+def update_first_place(leaderboard, player):
+    leaderboard[0] = player
+    return leaderboard
+
+leaderboard = ["Jay", "Meg", "Cy"]
+leaderboard = update_first_place(leaderboard, "Lena")
+print(leaderboard)
 
 ______________________________________________________________________________________________________
 Functions with Loops
