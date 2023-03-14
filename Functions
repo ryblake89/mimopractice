@@ -1,3 +1,7 @@
+______________________________________________________________________________________________________
+Creating Parameters
+______________________________________________________________________________________________________
+
 def greet(name):
     print(f"Hello, {name}")
 
@@ -11,7 +15,7 @@ def lamp_status():
 lamp_status()
 
 ______________________________________________________________________________________________________
-RETURN
+Returning Values
 ______________________________________________________________________________________________________
 
 def sign_up(user):
@@ -27,3 +31,60 @@ def age_label(age):
 
 result = age_label("29")
 print(result)
+______________________________________________________________________________________________________
+Using Multiple Parameters
+______________________________________________________________________________________________________
+
+def display(first, last):
+    print(first + " " + last)
+
+display("Alex", "Morgan")
+
+
+def show_winners(first, second, third):
+    print("First place: " + first)
+    print("Second place: " + second)
+    print("Third place: " + third)
+
+show_winners("Kim", "Lee", "Ava")
+
+def create_email(name, year):
+    return name + year + "@hutmail.com"
+
+email = create_email("jo", "1998")
+print(email)
+
+______________________________________________________________________________________________________
+Understanding Functions
+______________________________________________________________________________________________________
+def display_score(name, points):
+    print(f"{name}: {points} points")
+
+display_score("Johnny", 350)
+
+______________________________________________________________________________________________________
+Functions and Variable Scope
+______________________________________________________________________________________________________
+def apply_discount(price):
+    discount = 20
+    return price - discount
+
+final_price = apply_discount(50)
+print(final_price)
+
+Note: The variable discount is only accessable in the function. You cannot change it or access it outside the function.
+      Variables created outside of a function have a global scope. These variables are accessible anywhere.
+______________________________________________________________________________________________________
+Deciding with Functions
+______________________________________________________________________________________________________
+
+
+______________________________________________________________________________________________________
+Functions with Lists
+______________________________________________________________________________________________________
+
+
+______________________________________________________________________________________________________
+Functions with Loops
+______________________________________________________________________________________________________
+
