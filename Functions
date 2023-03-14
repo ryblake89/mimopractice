@@ -130,4 +130,22 @@ print(leaderboard)
 ______________________________________________________________________________________________________
 Functions with Loops
 ______________________________________________________________________________________________________
+def onboard_passengers(bookings):
+    counter = 1
+    while counter <= bookings:
+        print(f"Passenger {counter} on board")
+        counter += 1
+onboard_passengers(4)
 
+def display_progress():
+    for i in range(3):
+        print(f"Downloading file {i} out of 3")
+              
+display_progress()
+
+def halve_prices(cart):
+    for price in cart:
+        print(f"New price: {price/2}")
+        
+cart_list = [5, 20, 8]
+halve_prices(cart_list)
