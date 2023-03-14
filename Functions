@@ -1,0 +1,29 @@
+def greet(name):
+    print(f"Hello, {name}")
+
+greet("April")
+greet("Ryan")
+
+def lamp_status():
+    power = True
+    print(f"Powered On: {power}")
+    
+lamp_status()
+
+______________________________________________________________________________________________________
+RETURN
+______________________________________________________________________________________________________
+
+def sign_up(user):
+    status = user + " signed up"
+    return status
+
+result = sign_up("Desmond")
+print(result)
+
+def age_label(age):
+    label = "User age: " + age
+    return label
+
+result = age_label("29")
+print(result)
