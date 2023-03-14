@@ -77,7 +77,24 @@ Note: The variable discount is only accessable in the function. You cannot chang
 ______________________________________________________________________________________________________
 Deciding with Functions
 ______________________________________________________________________________________________________
+def add_shipping(cart):
+    if cart < 100:
+        print(f"Total: {cart + 10}")
+    else:
+        print(f"Total: {cart}")
 
+add_shipping(45)
+add_shipping(200)
+
+def calculate(operator, x, y):
+    if operator == "+":
+        print(x + y)
+    elif operator == "-":
+        print(x - y)
+    else:
+        print(f"unknown: {operator}")
+
+calculate("-", 30, 10)
 
 ______________________________________________________________________________________________________
 Functions with Lists
