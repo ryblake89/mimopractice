@@ -1,11 +1,13 @@
 ___________________________________________________________________________________________________________________________
-Creating Tuples - Similar to lists, but with () surrounding the information instead of []. Allows grouping of data. Tuples cannot be edited.
+Creating Tuples 
+- Similar to lists, but with () surrounding the information instead of []. Allows grouping of data. Tuples cannot be edited.
 ___________________________________________________________________________________________________________________________
 vertigo_data = ("Vertigo", 1958, "A. Hitchcock")
 print(vertigo_data)
 
 ___________________________________________________________________________________________________________________________
-Tuples and Lists - Can have tuples in lists as seen below.
+Tuples and Lists 
+- Can have tuples in lists as seen below.
 ___________________________________________________________________________________________________________________________
 scores = [("mia", 75), ("lee", 90)]
 print(scores)
@@ -45,29 +47,96 @@ locations = {
 print(locations)
 
 ___________________________________________________________________________________________________________________________
-Using Dictionaries
+Using Dictionaries 
+- Lists of "paired" values
 ___________________________________________________________________________________________________________________________
+actor_bio = {
+    "name": "Bill Murray",
+    "known for": ["Lost in Translation", "Rushmore"]
+}
 
+actor_name = actor_bio["name"]
 
+print(actor_name)
+
+player_scores = {
+    "ann": 13,
+    "michael": 20,
+    "ava": 34
+}
+
+for player in player_scores:
+    print(player_scores[player])
+    
+air = {
+    "nitrogen": "78%",
+    "oxygen": "21%",
+    "argon": "0.93%",
+    "carbon dioxide": "0.04%",
+    "other": "0.03%"
+}
+
+print(air["argon"])
+
+routine = {
+    "squats": 40,
+    "push-ups": 20,
+}
+
+routine["lunges"] = 30
+print(routine)
+
+personal_data = {
+    "name": "Mac Miller",
+    "telephone": "0047865791"
+}
+
+print("name" in personal_data
+has_address = "address" in personal_data
+      
+ticket = {
+    "seat no.": 25,
+    "window": True
+}
+
+if "destination" in ticket:
+      ticket.pop("destination")
+      
+ticket.pop("window")
+print(ticket)
+___________________________________________________________________________________________________________________________
+Creating Sets 
+- do not allow duplicate values. Always in {}. Do not have indices that are available to access.
+___________________________________________________________________________________________________________________________
+even_nums = {0, 2, 4, 6}
+print(even_nums)
 
 ___________________________________________________________________________________________________________________________
-Creating Sets
+Using Sets 
 ___________________________________________________________________________________________________________________________
+answers = {"yes", "no"}
+answers.add("maybe")
 
+print(answers)
 
+answer_options = {"yes", "no"}
 
-___________________________________________________________________________________________________________________________
-Using Sets
-___________________________________________________________________________________________________________________________
+for answer in answer_options:
+    print(f"Option: {answer}")
+print("no" in answer_options)
 
-
-
+classes = {"Geometry", "Music", "French"}
+if "History" in classes:
+    classes.remove("History")
+    
+print(classes)
 ___________________________________________________________________________________________________________________________
 Sets and Lists
 ___________________________________________________________________________________________________________________________
+grocery_list = ["broccoli", "cereal", "milk", "broccoli"]
 
-
-
+grocery_set = (set(grocery_list)) 
+#Transforms the list into a set, therefor removing the duplicate value
 ___________________________________________________________________________________________________________________________
 Set Operations
 ___________________________________________________________________________________________________________________________
