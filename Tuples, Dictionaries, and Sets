@@ -140,5 +140,23 @@ grocery_set = (set(grocery_list))
 ___________________________________________________________________________________________________________________________
 Set Operations
 ___________________________________________________________________________________________________________________________
+friends = {"Emma", "Jen", "Rob", "Ed"}
+chat = {"Jen", "Ed"}
 
+#To check whether a set like chat is a subset of another, like friends, we code chat, then .issubset(), with friends between parentheses.
+print(chat.issubset(friends))
 
+invitations = {"Meg", "Alex", "Lee"}
+print(f"{len(invitations)} invitations sent")
+
+classmates = {"Sue", "Paul"}
+friends = {"Don", "Sue"}
+
+#To combine two sets, use the .union command.
+print(classmates.union(friends))
+
+#To create a set of elements that are present in both sets use the .intersection command.
+print(classmates.intersection(friends))
+
+#To determine the elements present on the left set and not the right set.
+print(classmates.difference(friends))
