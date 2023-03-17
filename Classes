@@ -1,0 +1,114 @@
+_________________________________________________________________________________________________________________________________________________________________________
+Using Classes
+_________________________________________________________________________________________________________________________________________________________________________
+computer1_size = "15"
+computer1_storage = "1TB"
+
+computer2_size = "13"
+computer2_storage = "256GB"
+
+print("computer1 display size: " + computer1_size)
+print("computer1 storage space: " + computer1_storage)
+
+print("computer2 display size: " + computer2_size)
+print("computer2 storage space: " + computer2_storage)
+
+#Creating all the above variables can lead to mistakes and takes a lot of time. To help us group data and functionality, we create a class. A class is a template that we use to create many similar but distinct things.
+
+class Computer:
+    def __init__(self, size, storage):
+        self.size = size
+        self.storage = storage
+        
+    def print_specs(self):
+        print("Display size: " + self.size)
+        print("Storage size: " + self.storage)
+        
+low_spec = Computer("13", "256GB")
+mid_spec = Computer("15", "512GB")
+high_spec = Computer("27", "1TB")
+premium_spec = Computer("17", "2TB")
+
+print("Low Spec Computer:")
+low_spec.print_specs()
+
+print("High Spec Computer:")
+high_spec.print_specs()
+_________________________________________________________________________________________________________________________________________________________________________
+Creating Instances
+_________________________________________________________________________________________________________________________________________________________________________
+class Virtual_Pet:
+    color = "brown"
+    legs = 4
+    lives = "9"
+    wagging_tail = True
+    
+fluffy = Virtual_Pet()
+benny = Virtual_Pet()
+skippy = Virtual_Pet()
+
+#To access a class variable, we add the instance name, a . , and the name of the variable we want. Like skippy.wagging_tail here.
+print(skippy.wagging_tail)
+
+print(skippy.color)
+
+class Pokemon:
+    name = "squirtle"
+    weight = "19.8"
+    
+pokemon = Pokemon()
+print(pokemon.name)
+print(pokemon.weight)
+_________________________________________________________________________________________________________________________________________________________________________
+Classes with Methods
+_________________________________________________________________________________________________________________________________________________________________________
+#Classes can have functions too, which are known as methods when they're inside of a class. Like the bark() method here.
+class Virtual_Pet:
+    color = "brown"
+    
+    def bark(self):
+        print("Bark")
+        
+rocky = Virtual_Pet()
+rocky.bark()
+
+#self is a special keyword that we need to use inside our class definition. We pass self as the first parameter to all the methods we add.
+
+class Virtual_Pet:
+    color = "brown"
+    legs = 4
+    
+    def bark(self):
+        print("Bark")
+        
+    def display_color(self):
+        print(self.color)
+    
+    def display_legs(self):
+        print(self.legs)
+
+rocky = Virtual_Pet()
+rocky.display_color()
+rocky.display_legs()
+
+class Pokemon:
+    name = "pikachu"
+    color = "yellow"
+
+    def introduce(self):
+        print("Hi")
+        print("I am " + self.name)
+
+pikachu = Pokemon()
+pikachu.introduce()
+print(pikachu.color)
+_________________________________________________________________________________________________________________________________________________________________________
+Constructors
+_________________________________________________________________________________________________________________________________________________________________________
+
+
+_________________________________________________________________________________________________________________________________________________________________________
+Understanding Classes
+_________________________________________________________________________________________________________________________________________________________________________
+
+
