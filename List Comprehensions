@@ -16,25 +16,86 @@ print(halved)
 halved_lc = [price/2 for price in prices]
 print(halved_lc)
 
+prices = [10, 38, 40, 58, 62]
 
+prices_copy = [price for price in prices]
+
+print(prices_copy)
+
+names = ["Smith", "Miller", "Brown"]
+
+prefixed = ["Mr. " + name for name in names]
+print(prefixed)
+
+words = ["apple", "aligator", "abracadabra", "avatar"]
+
+a_count = [word.count("a") for word in words]
+
+print(a_count)
 ______________________________________________________________________________________________________________________________________________________________________
 Functions as Expressions
 ______________________________________________________________________________________________________________________________________________________________________
+prices = [10, 22, 30, 40, 58, 62]
 
+def halve(num):
+    no_tax = 0.85 * num
+    return no_tax/2
 
+halved = [halve(price) for price in prices]
 
+print(halved)
+
+authors = ["Virginia Wolf", "John Steinbeck"]
+
+def add_comma(name):
+    parts = name.split(" ")
+    return parts[1] + ", " + parts[0]
+
+authors_update = [add_comma(name) for name in authors]
+
+print(authors_update)
 ______________________________________________________________________________________________________________________________________________________________________
 Filtering With If Statements
 ______________________________________________________________________________________________________________________________________________________________________
+scores = [12, 47, 30, 29, 19, 35]
 
+high_scores = [score for score in scores if score > 20]
 
+print(high_scores)
 
+prices = [150, 45, 200, 340]
+
+apply_taxes = [price for price in prices if price > 150]
+print(apply_taxes)
 ______________________________________________________________________________________________________________________________________________________________________
 Negative Indexing and Deletion
 ______________________________________________________________________________________________________________________________________________________________________
+scores = [4.5, 5, 3, 4, 3.5, 4]
+latest = scores[-1]
+print(latest)
 
+winners = ["John", "Helen", "Sigmund", "Olaf"]
+del winners[-1]
+print(winners)
 
+product = {'category': 'book', 'price': 4.99, 'in_shop': True}
+del product['in_shop']
+print(product)
 
+user = ("Joe", "Paris", 27)
+name = user[0]
+age = user[-1]
+message = f"{name} {age}"
+print(message)
 ______________________________________________________________________________________________________________________________________________________________________
-Slice Notation
+Slice Notation - How to pull data with indexes, including step(skip) methods.
 ______________________________________________________________________________________________________________________________________________________________________
+ingredients = ["eggs", "flour", "sugar", "salt"]
+print(ingredients[0:2])
+
+letters = ["A", "B", "C", "D", "E", "F"]
+print(letters[4:])
+print(letters[1:])
+
+#This indexing pull shows the start:stop:step 
+print(letters[1:6:2])
