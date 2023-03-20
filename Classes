@@ -105,10 +105,47 @@ print(pikachu.color)
 _________________________________________________________________________________________________________________________________________________________________________
 Constructors
 _________________________________________________________________________________________________________________________________________________________________________
+#The constructor method looks like __init__() and allows us to set unique values for the class variables when we create an instance. Double underscore on each side.
+class Virtual_Pet:
+    def __init__(self, color, legs):
+        self.color = color
+        self.legs = legs
 
+rocky = Virtual_Pet("brown", 3)
+benny = Virtual_Pet("black", 4)
 
+print(rocky.color)
+print(rocky.legs)
+print(benny.color)
+print(benny.legs)
+
+class Pokemon:
+    def __init__(self, color, name):
+        self.color = color
+        self.name = name
+
+charizard = Pokemon("orange", "charizard")
+print(charizard.color)
+print(charizard.name)
 _________________________________________________________________________________________________________________________________________________________________________
 Understanding Classes
 _________________________________________________________________________________________________________________________________________________________________________
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
+teacher = Person("Emily", 24)
 
+class Pie:
+    def __init__(self, flavor, ingredients):
+        self.flavor = flavor
+        self.ingredients = ingredients
+        
+    def print_ingredients(self):
+        for i in self.ingredients:
+            print(i)
+            
+applePie = Pie('apple', ['flour', 'eggs', 'apples', 'butter'])
+
+applePie.print_ingredients()
